@@ -35,7 +35,7 @@ public class MyProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_myprofile);
 
         major = findViewById(R.id.major1);
         school = findViewById(R.id.school1);
