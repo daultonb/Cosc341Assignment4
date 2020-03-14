@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Assignment4</string>
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
+    <string name="back">Back</string>
+    <string name="username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="bio">Enter a bio</string>
+    <string name="hometown">Hometown</string>
+    <string name="school">School</string>
+    <string name="major">Major</string>
+
 </resources>
