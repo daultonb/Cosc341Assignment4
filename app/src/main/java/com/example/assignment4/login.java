@@ -44,9 +44,12 @@ public class login extends AppCompatActivity {
                     break;
                 }
                 String dbusername = line.substring(0, line.indexOf(","));
-                line = line.substring(line.indexOf(",") + 1, line.length());
+                String restofline = line.substring(line.indexOf(",") + 1, line.length());
                 String dbpassword = line.substring(0, line.indexOf(","));
                 if((username.equals(dbusername))&&(password.equals(dbpassword))){
+                    Intent myin = new Intent(this, MyProfile.class);
+                    myin.putExtra("userinfo",line);
+                    startActivity(myin);
                     finish();
                     return;
                 }

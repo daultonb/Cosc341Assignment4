@@ -28,10 +28,12 @@ public class register extends AppCompatActivity {
         EditText e4 = (EditText)this.findViewById(R.id.editText6);
         EditText e5 = (EditText)this.findViewById(R.id.editText7);
         EditText e6 = (EditText)this.findViewById(R.id.editText8);
+        EditText e7 = this.findViewById(R.id.editText9);
         String username = e1.getText().toString();
         String password = e2.getText().toString();
         String confirm = e3.getText().toString();
         String hometown = e4.getText().toString();
+        String school =e7.getText().toString();
         String major = e5.getText().toString();
         String bio = e6.getText().toString();
         if (username.length() <1) {
@@ -41,7 +43,7 @@ public class register extends AppCompatActivity {
         }
         else {
 
-            String writedata = username + "," + password + "," + hometown + "," + major + "," + bio + "\n";
+            String writedata = username + "," + password + "," + school + "," + hometown + "," + major + "," + bio + "\n";
             String filename = "data.txt";
 
             try {

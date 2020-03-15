@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -28,6 +30,7 @@ public class MyProfile extends AppCompatActivity {
     EditText school;
     EditText hometown;
     EditText bio;
+    TextView username;
     Button btn;
     boolean editing = false;
 
@@ -36,11 +39,30 @@ public class MyProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myprofile);
+        Intent myin = getIntent();
+        String line = myin.getStringExtra("userinfo");
+        String usernamestr = line.substring(0, line.indexOf(","));
+        line = line.substring(line.indexOf(",") + 1, line.length());
+        String passwordstr = line.substring(0, line.indexOf(","));
+        line = line.substring(line.indexOf(",") + 1, line.length());
+        String schoolstr = line.substring(0, line.indexOf(","));
+        line = line.substring(line.indexOf(",") + 1, line.length());
+        String hometownstr = line.substring(0, line.indexOf(","));
+        line = line.substring(line.indexOf(",") + 1, line.length());
+        String majorstr = line.substring(0, line.indexOf(","));
+        line = line.substring(line.indexOf(",") + 1, line.length());
+        String biostr = line.substring(0, line.indexOf(","));
 
+        username = findViewById(R.id.name);
+        username.setText(usernamestr);
         major = findViewById(R.id.major1);
+        major.setText(majorstr);
         school = findViewById(R.id.school1);
+        school.setText(schoolstr);
         hometown = findViewById(R.id.hometown1);
+        hometown.setText(hometownstr);
         bio = findViewById(R.id.bio1);
+        bio.setText(biostr);
         btn = findViewById(R.id.editprofile);
     }
 
