@@ -51,7 +51,7 @@ public class MyProfile extends AppCompatActivity {
         line = line.substring(line.indexOf(",") + 1, line.length());
         String majorstr = line.substring(0, line.indexOf(","));
         line = line.substring(line.indexOf(",") + 1, line.length());
-        String biostr = line.substring(0, line.indexOf(","));
+        String biostr = line.substring(0, line.length());
 
         username = findViewById(R.id.name);
         username.setText(usernamestr);

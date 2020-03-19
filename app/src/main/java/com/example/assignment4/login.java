@@ -35,36 +35,36 @@ public class login extends AppCompatActivity {
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
             line = "";
+            while((line = br.readLine()) != null) {
 
-            while(true) {
-                if ((line = br.readLine()) == null) {
-                    br.close();
-                    isr.close();
-                    fis.close();
-                    break;
-                }
+                String userinfo = line;
                 String dbusername = line.substring(0, line.indexOf(","));
-                String restofline = line.substring(line.indexOf(",") + 1, line.length());
+                line = line.substring(line.indexOf(",") + 1, line.length());
                 String dbpassword = line.substring(0, line.indexOf(","));
                 if((username.equals(dbusername))&&(password.equals(dbpassword))){
                     Intent myin = new Intent(this, MyProfile.class);
-                    myin.putExtra("userinfo",line);
-                    startActivity(myin);
+                    myin.putExtra("userinfo",userinfo);
                     finish();
-                    return;
+                    startActivity(myin);
+
+
                 }
+
 
 
 
             }
+            br.close();
+            isr.close();
+            fis.close();
         } catch (IOException var8) {
             var8.printStackTrace();
-            Toast.makeText(this.getApplicationContext(), "User not found. Please make sure info is correct.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getApplicationContext(), "Error: User not found. Please make sure info is correct.", Toast.LENGTH_SHORT).show();
             return;
         }
 
 
-        Toast.makeText(this.getApplicationContext(), "User not found. Please make sure info is correct.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getApplicationContext(), "User not found. Please make sure info is correct."+line, Toast.LENGTH_SHORT).show();
         return;
         //Intent intent = new Intent(this, myprofile.class);
         //startActivity(intent);
