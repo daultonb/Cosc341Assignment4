@@ -50,6 +50,7 @@ public class Swiping extends AppCompatActivity {
         bio = findViewById(R.id.bio1);
         bio0 = findViewById(R.id.bio);
         nofriends = findViewById(R.id.nofriends);
+        nofriends.setText("There are no new friends in your area. Please check back later.");
         nofriends.setVisibility(View.GONE);
         Swipe(b);
     }
