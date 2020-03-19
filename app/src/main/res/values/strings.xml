@@ -10,5 +10,19 @@
     <string name="hometown">Hometown</string>
     <string name="school">School</string>
     <string name="major">Major</string>
+    <string name="chat">Chat</string>
+    <string name="user1">Mike</string>
+    <string name="user2">Dominique</string>
+    <string name="user3">Jen</string>
+    <string name="user4">Jonah</string>
+    <string name="user5">Wilhelm</string>
+    <string name="user6">Norman</string>
+    <string name="user7">Carl</string>
+    <string name="user8">Patricia</string>
+    <string name="user9">Wendy</string>
+    <string name="user10">Brooklyn</string>
+    <string name="user11">Bjorn</string>
+    <string name="user12">Indiana</string>
+    <string name="user13">Brian</string>
 
 </resources>
