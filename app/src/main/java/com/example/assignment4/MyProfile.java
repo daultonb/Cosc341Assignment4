@@ -187,4 +187,15 @@ public class MyProfile extends AppCompatActivity {
             }
         }
     }
+
+    public void goToSwiping(View v){
+        Intent intent = new Intent(this, Swiping.class);
+        startActivity(intent);
+        }
+
+    public void goToMessages (View v){
+        Intent intent = new Intent(this, Connections.class);
+        startActivity(intent);
+    }
+
 }

@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Connections"></activity>
         <activity android:name=".login" />
+        <activity android:name=".Swiping"></activity>
         <activity android:name=".MyProfile" />
         <activity android:name=".register" />
         <activity android:name=".MainActivity">
