@@ -31,5 +31,6 @@
     <string name="user11">Bjorn</string>
     <string name="user12">Indiana</string>
     <string name="user13">Brian</string>
+    <string name="textview">TextView</string>
 
 </resources>

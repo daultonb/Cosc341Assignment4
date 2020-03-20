@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Connections"></activity>
+        <activity android:name=".MessageScreen"></activity>
+        <activity android:name=".Connections" />
         <activity android:name=".login" />
-        <activity android:name=".Swiping"></activity>
+        <activity android:name=".Swiping" />
         <activity android:name=".MyProfile" />
         <activity android:name=".register" />
         <activity android:name=".MainActivity">
