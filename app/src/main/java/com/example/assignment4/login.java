@@ -46,6 +46,8 @@ public class login extends AppCompatActivity {
                     myin.putExtra("userinfo",userinfo);
                     finish();
                     startActivity(myin);
+                    return;
+
 
 
                 }

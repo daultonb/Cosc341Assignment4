@@ -2,8 +2,8 @@
     <string name="app_name">Friend Finder</string>
     <string name="login">Log In</string>
     <string name="register">Register</string>
-    <string name="Messages">Messages</string>
-    <string name="swipe">Swipe</string>
+    <string name="Messages">Connections</string>
+    <string name="swipe">Find Friends</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="my_profile">My Profile</string>
     <string name="like">Like</string>

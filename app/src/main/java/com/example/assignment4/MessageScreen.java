@@ -1,18 +1,25 @@
 package com.example.assignment4;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.content.Intent;
 
+import android.os.Message;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.Toast;
+import java.util.Calendar;
 
 public class MessageScreen extends AppCompatActivity {
-
+    int msgnum = 0;
     String name;
+    LinearLayout lin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +29,8 @@ public class MessageScreen extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         name = bundle.getString("name");
-
+        lin = (LinearLayout) findViewById(R.id.messageBox);
+        lin.removeAllViews();
         loadInformation();
         buttonHandler();
     }
@@ -63,7 +71,22 @@ public class MessageScreen extends AppCompatActivity {
     }
     //Pushes message to conversation
     private void sendMessageToConversation(String msg){
-        //TODO PUSH MESSAGE
+        msgnum++;
+        TextView timestamp =  new TextView(MessageScreen.this);
+        timestamp.setId(msgnum*100);
+        timestamp.setText(Calendar.getInstance().getTime().toString());
+        timestamp.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        timestamp.setTextColor(Color.GRAY);
+        TextView tv =  new TextView(MessageScreen.this);
+        tv.setId(msgnum);
+        tv.setText(msg);
+        tv.setTextColor(Color.BLACK);
+        tv.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
+        tv.setTextAppearance(this, android.R.style.TextAppearance_Large);
+        lin.addView(timestamp);
+        lin.addView(tv);
+
+
     }
     //Return to previous activity(Connections.class)
     private void intentHandler() {
