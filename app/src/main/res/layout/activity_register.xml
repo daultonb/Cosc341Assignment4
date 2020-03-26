@@ -13,6 +13,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
+        android:hint="*required*"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.771"
@@ -36,7 +37,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="92dp"
         android:text="@string/major"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -50,7 +51,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:text="@string/password"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -61,7 +62,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="52dp"
         android:text="@string/username"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,7 +97,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:text="@string/confirm"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -107,6 +108,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
+        android:hint="*required*"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.771"
@@ -135,7 +137,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="60dp"
         android:text="@string/bio"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -151,6 +153,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
+        android:hint="*required*"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.771"
@@ -183,7 +186,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="35dp"
         android:text="@string/school"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"

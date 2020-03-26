@@ -1,4 +1,10 @@
 <resources>
+    <string name="welcome">Welcome to Friend Finder!</string>
+    <string name="registerpage">Register for Friend Finder</string>
+    <string name="loginpage">Log in to Friend Finder</string>
+    <string name="connectionpage">Message a new friend</string>
+    <string name="myprofilepage">Your Profile</string>
+    <string name="swipingpage">Find new Friends!</string>
     <string name="app_name">Friend Finder</string>
     <string name="login">Log In</string>
     <string name="register">Register</string>

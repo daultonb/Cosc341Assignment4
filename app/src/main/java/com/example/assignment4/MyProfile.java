@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -72,7 +73,15 @@ public class MyProfile extends AppCompatActivity {
             school.setEnabled(true);
             hometown.setEnabled(true);
             bio.setEnabled(true);
+
+
+            major.setTextColor(Color.BLACK);
+            school.setTextColor(Color.BLACK);
+            hometown.setTextColor(Color.BLACK);
+            bio.setTextColor(Color.BLACK);
             btn.setText("Submit");
+            btn.setBackgroundColor(Color.GREEN);
+            btn.setTextColor(Color.BLACK);
             editing = true;
         }
         else
@@ -81,7 +90,13 @@ public class MyProfile extends AppCompatActivity {
             school.setEnabled(false);
             hometown.setEnabled(false);
             bio.setEnabled(false);
+            major.setTextColor(Color.GRAY);
+            school.setTextColor(Color.GRAY);
+            hometown.setTextColor(Color.GRAY);
+            bio.setTextColor(Color.GRAY);
             btn.setText("Edit Profile");
+            btn.setBackgroundColor(Color.LTGRAY);
+            btn.setTextColor(Color.BLACK);
             editing = false;
         }
 

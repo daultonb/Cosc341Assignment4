@@ -42,20 +42,36 @@ public class login extends AppCompatActivity {
                 line = line.substring(line.indexOf(",") + 1, line.length());
                 String dbpassword = line.substring(0, line.indexOf(","));
                 if((username.equals(dbusername))&&(password.equals(dbpassword))){
+
                     Intent myin = new Intent(this, MyProfile.class);
                     myin.putExtra("userinfo",userinfo);
                     finish();
                     startActivity(myin);
+                    finish();
                     return;
-
-
-
+                    }
+                    else if (username.equals("")){
+                        Toast.makeText(this.getApplicationContext(), "Please enter a username!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(password.equals("")){
+                        Toast.makeText(this.getApplicationContext(), "Please enter a password!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(username.equals(dbusername)){
+                    Toast.makeText(this.getApplicationContext(), "Incorrect password. Please try again", Toast.LENGTH_SHORT).show();
                 }
 
 
 
 
+
+
+
+
+
             }
+            Toast.makeText(this.getApplicationContext(), "User not found. Did you register?", Toast.LENGTH_SHORT).show();
             br.close();
             isr.close();
             fis.close();
@@ -66,10 +82,9 @@ public class login extends AppCompatActivity {
         }
 
 
-        Toast.makeText(this.getApplicationContext(), "User not found. Please make sure info is correct."+line, Toast.LENGTH_SHORT).show();
+
         return;
-        //Intent intent = new Intent(this, myprofile.class);
-        //startActivity(intent);
+
     }
 }
 
