@@ -50,6 +50,7 @@ public class register extends AppCompatActivity {
                 FileOutputStream outputStream = this.openFileOutput(filename, Context.MODE_APPEND);
                 outputStream.write(writedata.getBytes());
                 outputStream.close();
+                Toast.makeText(this.getApplicationContext(), "Your account has been created!", Toast.LENGTH_SHORT).show();
             } catch (Exception var17) {
                 var17.printStackTrace();
             }

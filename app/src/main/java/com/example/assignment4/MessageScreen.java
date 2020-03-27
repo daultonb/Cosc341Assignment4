@@ -65,6 +65,7 @@ public class MessageScreen extends AppCompatActivity {
         if (!(msg.length() <= 0)) {
             System.out.println(msg);
             sendMessageToConversation(msg);
+            textView.setText("");
         }else {
             Toast.makeText(getApplicationContext(),"You Must Enter A Message First",Toast.LENGTH_SHORT).show();
         }
