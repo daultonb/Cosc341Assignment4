@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,6 +35,9 @@ public class Swiping extends AppCompatActivity {
     TextView nofriends;
     View b;
 
+    Button like;
+    Button dislike;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,8 @@ public class Swiping extends AppCompatActivity {
         nofriends = findViewById(R.id.nofriends);
         nofriends.setText("There are no new friends in your area. Please check back later.");
         nofriends.setVisibility(View.GONE);
+        like = findViewById(R.id.like);
+        dislike = findViewById(R.id.dislike);
         Swipe(b);
     }
 
@@ -70,6 +76,8 @@ public class Swiping extends AppCompatActivity {
             hometown0.setVisibility(View.GONE);
             bio.setVisibility(View.GONE);
             bio0.setVisibility(View.GONE);
+            like.setVisibility(View.GONE);
+            dislike.setVisibility(View.GONE);
         }
         else{
             name.setText(names[counter]);
